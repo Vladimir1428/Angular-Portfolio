@@ -29,7 +29,8 @@ export class AnimateDirective extends AnimateService {
     const left = rt.left + coerceNumberProperty(this.left, 0);
     const bottom = rt.bottom + coerceNumberProperty(this.bottom, 0);
     const right = rt.right + coerceNumberProperty(this.right, 0);
-    return { top, left, bottom, right, height: bottom - top, width: right - left };
+    return { top, left, bottom, right, height: bottom - top, width: right - left,x: left, y: top, toJSON: () => ({ top, left, bottom, right, height: bottom - top, width: right - left })
+    };
   }
 
   constructor(private elref: ElementRef<HTMLElement>, readonly viewPort: ViewportRuler, scroll: ScrollDispatcher, zone: NgZone) {
