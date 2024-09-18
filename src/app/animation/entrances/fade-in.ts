@@ -2,15 +2,15 @@ import { state, animate, style, transition } from '@angular/animations';
 
 export const fadeIn = [
 
-  state('idle-fadeIn', style({ opacity: 0 }) ),
-  state('idle-fadeInRight', style({ opacity: 0 }) ),
-  state('idle-fadeInLeft', style({ opacity: 0 }) ),
-  state('idle-fadeInUp', style({ opacity: 0 }) ),
-  state('idle-fadeInDown', style({ opacity: 0 }) ),
+  state('idle-fadeIn', style({ opacity: 1 }) ),
+  state('idle-fadeInRight', style({ opacity: 1 }) ),
+  state('idle-fadeInLeft', style({ opacity: 1 }) ),
+  state('idle-fadeInUp', style({ opacity: 1 }) ),
+  state('idle-fadeInDown', style({ opacity: 1 }) ),
 
   transition('* => fadeIn', [
 
-    style({ opacity: 0 }),
+    style({ opacity: 1 }),
     
     animate('{{timing}} {{delay}} ease-in', style('*'))
 
@@ -18,7 +18,7 @@ export const fadeIn = [
 
   transition('* => fadeInRight', [
 
-    style({ opacity: 0, transform: 'translateX(-20px)' }),
+    style({ opacity: 1, transform: 'translateX(-20px)' }),
 
     animate('{{timing}} {{delay}} ease-in', style('*'))
 
@@ -26,7 +26,7 @@ export const fadeIn = [
 
   transition('* => fadeInLeft', [
 
-    style({ opacity: 0, transform: 'translateX(20px)' }),
+    style({ opacity: 1, transform: 'translateX(20px)' }),
 
     animate('{{timing}} {{delay}} ease-in', style('*'))
 
@@ -34,7 +34,7 @@ export const fadeIn = [
 
   transition('* => fadeInUp', [
 
-    style({ opacity: 0, transform: 'translateY(20px)' }),
+    style({ opacity: 1, transform: 'translateY(20px)' }),
 
     animate('{{timing}} {{delay}} ease-in', style('*'))
 
@@ -42,7 +42,7 @@ export const fadeIn = [
 
   transition('* => fadeInDown', [
 
-    style({ opacity: 0, transform: 'translateY(-20px)' }),
+    style({ opacity: 1, transform: 'translateY(-20px)' }),
 
     animate('{{timing}} {{delay}} ease-in', style('*'))
 

@@ -20,22 +20,17 @@ export function runInZone<T>(zone: NgZone): OperatorFunction<T, T> {
 })
 export class AnimateService {
 
-  private view$: Observable<ClientRect>;
+  private view$: Observable<DOMRect>;
 
-  protected get viewRect(): ClientRect {
+  protected get viewRect(): DOMRect {
     return this.viewPort.getViewportRect();
   }
 
   constructor(readonly scroll: ScrollDispatcher, readonly viewPort: ViewportRuler, private zone: NgZone) {
 
     this.view$ = viewPort.change(100).pipe(
-
       startWith( null ),
-
       map( () => this.viewRect ),
-
-      debounceTime(20),
-
       shareReplay(1)
     );
   }
@@ -50,13 +45,15 @@ export class AnimateService {
   }
 
   private aos(elm: ElementRef<HTMLElement>, threshold: number): Observable<boolean> {
-
+        console.log(elm)
+        
     return this.scroll.ancestorScrolled(elm, 0).pipe(
       startWith(0),
       switchMap( () => this.visibility(elm) ),
       scan((result, visiblility) => (visiblility >= threshold) || (result && visiblility > 0), false),
       distinctUntilChanged(),
       runInZone(this.zone)
+    
     );
   }
   private visibility(elm: ElementRef<HTMLElement>): Observable<number> {

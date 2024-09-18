@@ -22,7 +22,7 @@ export class AnimateDirective extends AnimateService {
 
   @Input() right: number;
 
-  protected get viewRect(): ClientRect {
+  protected get viewRect(): DOMRect {
     const rt = this.element ? this.elref.nativeElement.getBoundingClientRect()
       : this.viewPort.getViewportRect();
     const top = rt.top + coerceNumberProperty(this.top, 0);

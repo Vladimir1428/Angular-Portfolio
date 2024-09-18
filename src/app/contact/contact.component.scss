@@ -1,28 +1,21 @@
-.social{
-  margin-left: 15%;
-}
+
 .contact-div-main {
   display: flex;
-  padding-left: 35%;
+ align-items: center  ;
+ flex-direction: column;
 }
 
 .subTitle {
   color: rgb(134, 142, 150);
 }
 
-.contact-div-main > * {
-  flex: 1;
-}
-
 .contact-title {
   font-size: 65px;
   font-weight: 400;
-  margin-bottom: 2rem;
 }
 
 .contact-detail,
 .contact-detail-email {
-  margin-top: 20px;
   font-size: 40px;
   font-weight: 400;
   color: #868e96;

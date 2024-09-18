@@ -2,7 +2,7 @@ import { state, animate, style, transition, keyframes } from '@angular/animation
 
 export const jackInTheBox = [
 
-  state('idle-jackInTheBox', style({ opacity: 0 }) ),
+  state('idle-jackInTheBox', style({ opacity: 1 }) ),
   
   transition('* => jackInTheBox', [
     
@@ -14,12 +14,12 @@ export const jackInTheBox = [
         style({ 
           transform: 'scale(0.1) rotate(30deg)',
           transformOrigin: 'center bottom', 
-          opacity: 0,
+        
           offset: 0 
         }),
         style({ 
           transform: 'rotate(-10deg)', 
-          opacity: 0.7, 
+        
           offset: 0.5 
         }),
         style({ transform: 'rotate(3deg)', offset: 0.7 }),

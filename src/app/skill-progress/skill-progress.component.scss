@@ -57,18 +57,7 @@ h1{
   }
 }
 
-@media (max-width: 768px) {
-  .skills-container {
-    flex-direction: column
-  }
-  .skills-bar {
-    line-height: 3rem;
-    margin: 20px;
-  }
-  .skills-image {
-    order: 2;
-  }
-}
+
 
 @keyframes fade_down {
   0% {

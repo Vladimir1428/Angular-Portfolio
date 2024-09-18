@@ -2,7 +2,7 @@ import { state, animate, style, transition, keyframes } from '@angular/animation
 
 export const landing = [
 
-  state('idle-landing', style({ opacity: 0 }) ),
+  state('idle-landing', style({ opacity: 1 }) ),
   transition('* => landing', [
     style({
       transform: 'scale(1.2)',

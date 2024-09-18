@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class SocialMediaComponent implements OnInit {
   socialMediaLinks = {
     github: "https://github.com/Vladimir1428",
-    gmail: "vova123555@gmail.com"
+    gmail: "vova123555@gmail.com",
+    linkedIn: "https://www.linkedin.com/in/volodymyr-levytskyi-a281b5185/"
   };
   constructor() { }
 

@@ -107,6 +107,7 @@ export class AnimateComponent implements OnInit, OnDestroy {
 
       this.trigger = this.idle;
       this.replay$.next(true);
+
     }
   }
 
@@ -120,9 +121,11 @@ export class AnimateComponent implements OnInit, OnDestroy {
       takeWhile(trigger => !trigger || !this.once, true),
 
     ).subscribe( trigger => {
+      console.log(this.trigger)
       this.trigger = trigger ? this.play : this.idle;
     });
   }
 
-  ngOnDestroy() { this.sub.unsubscribe(); }
+  ngOnDestroy() {console.log("destroy")
+     this.sub.unsubscribe(); }
 }

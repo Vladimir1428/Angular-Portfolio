@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class EducationComponent implements OnInit {
   timeline = [
     {
-      heading: "Student of the Faculty of Physics",
+      heading: "Student of the Faculty of Cybersecurity",
       duration: "2020",
-      subtitle: "KNU University, Kiev",
+      subtitle: "State University of Intellectual Technologies and Telecommunications, Odesa",
       className1: "mar-right",
       className2: "prt_about_learnbox_left"
     },

@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
   public contactInfo = {
     title: "Contact Me ☎️",
-    number: "+380635144052",
+    number: "+380636182567",
     email_address: "vova123555@gmail.com"
   };
   constructor() { }
